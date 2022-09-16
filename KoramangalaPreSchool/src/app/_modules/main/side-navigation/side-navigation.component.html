@@ -1,0 +1,20 @@
+<div fxLayout="column" fxLayoutGap="50px" class="sidenav-menu-list">
+    <button mat-mini-fab fxFlexAlign="end" (click)="toggle.emit()" color="primary" class="mat-elevation-z1">
+        <mat-icon>close</mat-icon>
+    </button>
+    <div fxLayout="column">
+        <button mat-button [routerLink]="['/']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:
+            true}" (click)="toggle.emit()"
+            aria-label="Home routing button" >Home</button>
+        <button mat-button [routerLink]="['/about-us']" routerLinkActive="router-link-active" (click)="toggle.emit()"
+            aria-label="About us routing button">About Us</button>
+        <button mat-button [routerLink]="['/admissions']" routerLinkActive="router-link-active" (click)="toggle.emit()"
+            aria-label="Admissions routing button">Admissions</button>
+        <button mat-button [routerLink]="['/beyond-academics']" routerLinkActive="router-link-active" (click)="toggle.emit()"
+            aria-label="Beyond Academics routing button">Beyond Academics</button>
+        <button mat-button [routerLink]="['/curriculum']" routerLinkActive="router-link-active" (click)="toggle.emit()"
+            aria-label="Curriculum routing button">Curriculum</button>
+        <button mat-button [routerLink]="['/contact-us']" routerLinkActive="router-link-active"
+            (click)="toggle.emit()" aria-label="Contact Us routing button">Contact Us</button>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+.sidenav-menu-list {
+    padding: 15px;
+    .mat-button {
+        color: var(--primary-color);
+        font-size: 16px;
+    }
+    .mat-button:hover,
+    .mat-button.router-link-active {
+        color: var(--accent-color);
+    }
+}
+.mat-expansion-panel {
+    background: transparent;
+}
+::ng-deep {
+    .mat-content{
+        flex: inherit !important;
+    }
+    // .mat-expansion-indicator::after {
+    //    display:none;
+    // }
+}
+
