@@ -1,0 +1,13 @@
+export * from './account.service';
+import { AccountService } from './account.service';
+export * from './admin.service';
+import { AdminService } from './admin.service';
+export * from './chatBot.service';
+import { ChatBotService } from './chatBot.service';
+export * from './dropDown.service';
+import { DropDownService } from './dropDown.service';
+export * from './home.service';
+import { HomeService } from './home.service';
+export * from './payment.service';
+import { PaymentService } from './payment.service';
+export const APIS = [AccountService, AdminService, ChatBotService, DropDownService, HomeService, PaymentService];
