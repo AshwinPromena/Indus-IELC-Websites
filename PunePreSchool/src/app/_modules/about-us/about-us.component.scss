@@ -1,0 +1,116 @@
+@import "../home/home.component.scss";
+.banner-bg {
+    background-image: url(../../../assets/images/about-us/about-banner-bg.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh;
+    width: 100%;
+}
+.overlay {
+    height: 60vh;
+    width: 100%;
+    background-image: radial-gradient(rgb(0 0 0 / 70%), rgb(0 0 0 / 30%), rgb(0 0 0 / 10%), transparent);
+}
+
+.vision-vector-img1 {
+    position: absolute;
+    top: -60px;
+    left: 80px;
+    width: 80px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.relative-img {
+    position: relative;
+    img {
+        border-radius: 10px;
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 5px);
+        // background-image: linear-gradient(315deg, #5e8fad, #1b0f3b00);
+        border-radius: 10px;
+    }
+}
+.indus-year-book-bg {
+    background-image: url(../../../assets/images/about-us/indus-year-book-bg.jpg);
+    // background-position-y: center;
+    // background-position-x: left;
+    background-size: cover;
+    min-height: 80vh;
+}
+::ng-deep {
+    .mat-tab-label {
+        font-size: 18px;
+        color: var(--accent-color);
+        font-weight: 500;
+    }
+    .mat-tab-body {
+        padding: 20px 0px;
+    }
+}
+@media (min-width: 960px) and (max-width: 1279px) {
+    .vision-vector-img1 {
+        position: absolute;
+        top: -45px;
+        left: 100px;
+        width: 70px;
+    }
+}
+@media (min-width: 600px) and (max-width: 959px) {
+    .vision-vector-img1 {
+        position: absolute;
+        top: -40px;
+        left: 80px;
+        width: 60px;
+    }
+}
+
+@media (max-width: 599px) {
+    .vision-vector-img1 {
+        position: absolute;
+        top: -60px;
+        left: 10px;
+        width: 50px;
+    }
+    .indus-year-book-bg {
+        .vision-vector-img1 {
+            position: absolute;
+            top: -30px;
+            left: 10px;
+            width: 50px;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .vision-vector-img1 {
+        top: -4.16vw;
+        left: 5.55vw;
+        width: 5.55vw;
+    }
+
+    .relative-img {
+        img {
+            border-radius: 0.69vw;
+        }
+        .overlay {
+            border-radius: 0.69vw;
+        }
+    }
+}
+::ng-deep {
+    @media (min-width: 1440px) {
+        .mat-tab-label {
+            font-size: 1.25vw;
+        }
+        .mat-tab-body {
+            padding: 1.38vw 0px;
+        }
+    }
+}

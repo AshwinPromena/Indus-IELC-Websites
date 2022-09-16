@@ -1,0 +1,13 @@
+<mat-sidenav-container>
+  <mat-sidenav #drawer mode="over" fixedInViewport style="width:100%;background: #eef2fbce;">
+    <app-side-navigation (toggle)="drawer.toggle()"></app-side-navigation>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-header (toggle)="drawer.toggle()"></app-header>
+    <div class="outlet">
+      <router-outlet></router-outlet>
+    </div>
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

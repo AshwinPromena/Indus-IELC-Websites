@@ -1,0 +1,41 @@
+<mat-toolbar class="toolbar" fxLayout="row wrap" fxLayoutAlign="space-between none">
+    <div fxFlex.gt-md="8.33vw" fxFlex="100px" fxFlex.lt-lg="80px" fxLayoutAlign="center none" data-aos="fade-right"  data-aos-easing="ease-in-sine">
+        <a [routerLink]="['/']" routerLinkActive="router-link-active" aria-label="home page link">
+            <img src="../../../../assets/images/logos/indus-elc-logo.png" alt="Indus Early Learning Centre logo"
+                width="100%">
+        </a>
+    </div>
+    <div fxLayout="row wrap" fxLayoutGap.gt-md="0.69vw" fxLayoutGap.md="10px" fxLayoutAlign="start start" class="nav-menus"
+        fxHide.lt-md fxShow.gt-sm data-aos="fade-left"  data-aos-easing="ease-in-sine">
+        <button mat-button [routerLink]="['/']" routerLinkActive="router-link-active"  [routerLinkActiveOptions]="{exact:
+            true}" class="nav-main-li"
+            aria-label="Home routing button" [disableRipple]="true">
+            Home
+        </button>
+        <button mat-button [routerLink]="['/about-us']" routerLinkActive="router-link-active"
+            class="nav-main-li" aria-label="About us routing button" [disableRipple]="true">
+            About Us
+        </button>
+        <button mat-button [routerLink]="['/admissions']" routerLinkActive="router-link-active"
+            class="nav-main-li" aria-label="Admissions routing button" [disableRipple]="true">
+            Admissions
+        </button>
+        <button mat-button [routerLink]="['/beyond-academics']" routerLinkActive="router-link-active"
+            class="nav-main-li" aria-label="Beyond Academics routing button" [disableRipple]="true">
+            Beyond Academics
+        </button>
+        <button mat-button [routerLink]="['/curriculum']" routerLinkActive="router-link-active"
+            class="nav-main-li" aria-label="Curriculum routing button" [disableRipple]="true">
+            Curriculum
+        </button>
+        <button mat-button [routerLink]="['/contact-us']" routerLinkActive="router-link-active"
+            class="nav-main-li" aria-label="Contact Us routing button" [disableRipple]="true">
+            Contact Us
+        </button>
+    </div>
+    <div class="nav-menus" fxShow.lt-md fxHide.gt-sm>
+        <button mat-icon-button class="text-white" (click)="toggle.emit()" aria-label="toggle side nav button">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+</mat-toolbar>

@@ -1,0 +1,174 @@
+<div class="footer-bg" fxLayout="column" fxLayoutGap.gt-md="0.69vw" fxLayoutGap="10px">
+  <img src="../../../../assets/images/footer/footer-vector-icon.png" alt="footer vector image"
+    class="footer-vector-img">
+  <div fxLayout="row wrap" fxLayout.lt-lg="column" fxLayoutGap.gt-md="2.77vw" fxLayoutGap="40px">
+    <div fxFlex="30%" fxLayout="column" fxLayoutGap.gt-md="1.38vw" fxLayoutGap="20px">
+      <div fxLayout="row">
+        <div fxFlex.gt-md="8.33vw" fxFlex.lt-lg="120px">
+          <a [routerLink]="['/']" routerLinkActive="router-link-active" aria-label="home page link">
+            <img src="../../../../assets/images/logos/indus-elc-logo.png" alt="Indus Early Learning Centre logo"
+              width="100%">
+          </a>
+        </div>
+      </div>
+      <div fxLayout="column" fxLayoutGap.gt-md="0.69vw" fxLayoutGap="10px">
+        <div fxLayout="row nowrap" fxLayoutGap.gt-md="0.69vw" fxLayoutGap="10px">
+          <mat-icon color="accent">call</mat-icon>
+          <span class="fs-small text-white  link-ui"><a href="tel:917767810755  " class="text-d-n text-white"
+              aria-label="call to link">+91-7767810755</a></span>
+              <span class="fs-small text-white  link-ui"><a href="tel:918390909900" class="text-d-n text-white"
+                aria-label="call to link">+91-8390909900</a></span>
+        </div>
+        <div fxLayout="row nowrap" fxLayoutGap.gt-md="0.69vw" fxLayoutGap="10px">
+          <mat-icon color="accent">email</mat-icon>
+          <span class="fs-small text-white link-ui"><a href="mailto:meenakshi.singh@indusearlyyears.com"
+              class="text-d-n text-white" aria-label="mail to link">meenakshi.singh@indusearlyyears.com</a></span>
+        </div>
+        <div fxLayout="row nowrap" fxLayoutGap.gt-md="0.69vw" fxLayoutGap="10px">
+          <mat-icon color="accent">navigation</mat-icon>
+          <span class="fs-small text-white">Indus Early Learning Centre, S.No.225/1/2/Baner, Dp road,
+            Opposite Gaikwad Petrol Pump, Aundh, Pune , Maharashtra -411008</span>
+        </div>
+        <div fxLayout="row wrap" fxLayoutGap="10px">
+          <a mat-mini-fab color="accent" class="mat-elevation-z0" href="" target="_blank"><img
+              src="../../../../assets/images/footer/facebook.png" alt="facebook icon" width="20px"></a>
+          <a mat-mini-fab color="accent" class="mat-elevation-z0" href="" target="_blank"><img
+              src="../../../../assets/images/footer/instagram.png" alt="instagram icon" width="20px"></a>
+          <a mat-mini-fab color="accent" class="mat-elevation-z0" href="" target="_blank"><img
+              src="../../../../assets/images/footer/youtube.png" alt="youtube icon" width="20px"></a>
+        </div>
+      </div>
+    </div>
+    <div fxFlex="" fxLayout="row wrap" fxLayoutAlign="space-between none" fxLayoutAlign.xs="start start"
+    fxLayoutGap="20px grid">
+    <div fxFlex.xs="calc(50% - 20px)" fxLayout="column" fxLayoutGap.gt-md="1.38vw" fxLayoutGap="20px">
+      <span class="fs-small text-accent fw-500">About Us</span>
+      <div fxLayout="column" fxLayoutGap.gt-md="0.69vw" fxLayoutGap="10px">
+        <span class="fs-small text-white cursor link-ui" [routerLink]="'/about-us'"
+          [queryParams]="{ contentView:'leadership' }" color="primary"
+          aria-label="Leadership routing link">Leadership</span>
+
+        <span class="fs-small text-white cursor link-ui" routerLink="/about-us"
+          [queryParams]="{ contentView:'spotlight' }" aria-label="Indus Spotlight routing link">Indus
+          Spotlight</span>
+
+        <span class="fs-small text-white cursor link-ui" routerLink="/"
+          aria-label="Newsletter routing link">Newsletter</span>
+
+        <span class="fs-small text-white cursor link-ui" [routerLink]="'/about-us'"
+          [queryParams]="{ contentView:'yearbook' }" color="primary" aria-label="Indus Yearbook routing link">Indus
+          Yearbook</span>
+        <span class="fs-small text-white cursor link-ui" [routerLink]="'/about-us'"
+          [queryParams]="{ contentView:'CAMPUS' }" color="primary" aria-label="Campus Life routing link">Campus
+          Life</span>
+        <span class="fs-small text-white cursor link-ui" [routerLink]="'/about-us'"
+          [queryParams]="{ contentView:'pac' }" color="primary" aria-label="PAC routing link">PAC</span>
+      </div>
+    </div>
+    <div fxFlex.xs="calc(50% - 20px)" fxLayout="column" fxLayoutGap.gt-md="1.38vw" fxLayoutGap="20px">
+      <span class="fs-small text-accent fw-500">Admissions</span>
+      <div fxLayout="column" fxLayoutGap.gt-md="0.69vw" fxLayoutGap="10px">
+
+        <span class="fs-small text-white cursor link-ui" [routerLink]="'/admissions'"
+          [queryParams]="{ contentView:'Process' }" aria-label="Admission Process routing link">Admission
+          Process</span>
+
+        <span class="fs-small text-white cursor link-ui" [routerLink]="'/admissions'"
+          [queryParams]="{ contentView:'Eligibility' }" aria-label="Eligibility routing link">Eligibility</span>
+
+        <span class="fs-small text-white cursor link-ui" [routerLink]="'/admissions'"
+          [queryParams]="{ contentView:'Inquiry' }" aria-label="Inquiry Form routing link">Inquiry
+          Form</span>
+        <span class="fs-small text-white cursor link-ui" [routerLink]="'/admissions'"
+          [queryParams]="{ contentView:'faq' }" aria-label="FAQ's routing link">FAQ's</span>
+
+        <span class="fs-small text-white cursor link-ui" [routerLink]="'/admissions'"
+          [queryParams]="{ contentView:'Testimonials' }" aria-label="Testimonials routing link">Testimonials</span>
+      </div>
+    </div>
+
+    <div fxFlex.xs="calc(50% - 20px)" fxLayout="column" fxLayoutGap.gt-md="1.38vw" fxLayoutGap="20px">
+      <span class="fs-small text-accent fw-500">Beyond Academics</span>
+
+      <div fxLayout="column" fxLayoutGap.gt-md="0.69vw" fxLayoutGap="10px">
+        <span class="fs-small text-white cursor link-ui" [routerLink]="'/beyond-academics'"
+          [queryParams]="{ contentView:'Whole' }" aria-label="Whole Education routing link">Whole Education</span>
+
+        <span class="fs-small text-white cursor link-ui" [routerLink]="'/beyond-academics'"
+          [queryParams]="{ contentView:'Curriculum' }" aria-label="Leadership Curriculum routing link">Leadership
+          Curriculum</span>
+      </div>
+    </div>
+
+    <div fxFlex.xs="calc(50% - 20px)" fxLayout="column" fxLayoutGap.gt-md="1.38vw" fxLayoutGap="20px">
+      <span class="fs-small text-accent fw-500">Curriculum</span>
+      <div fxLayout="column" fxLayoutGap.gt-md="0.69vw" fxLayoutGap="10px">
+        <span class="fs-small text-white cursor link-ui" [routerLink]="'/curriculum'"
+          [queryParams]="{ contentView:'Programmes' }" aria-label="Programmes routing link">Programmes</span>
+
+        <span class="fs-small text-white cursor link-ui" [routerLink]="'/curriculum'"
+          [queryParams]="{ contentView:'SEN' }" aria-label="SEL & ESL routing link">SEN &
+          ESL</span>
+
+      </div>
+    </div>
+
+  </div>
+    <!-- <div fxFlex="" fxLayout="row wrap" fxLayoutAlign="space-between none" fxLayoutAlign.xs="start start"
+      fxLayoutGap="20px grid">
+      <div fxFlex.xs="calc(50% - 20px)" fxLayout="column" fxLayoutGap.gt-md="1.38vw" fxLayoutGap="20px">
+        <span class="fs-small text-accent fw-500">About Us</span>
+        <div fxLayout="column" fxLayoutGap.gt-md="0.69vw" fxLayoutGap="10px">
+          <span class="fs-small text-white cursor link-ui" routerLink="/"
+            aria-label="Leadership routing link">Leadership</span>
+          <span class="fs-small text-white cursor link-ui" routerLink="/"
+            aria-label="Indus Spotlight routing link">Indus Spotlight</span>
+          <span class="fs-small text-white cursor link-ui" routerLink="/"
+            aria-label="Newsletter routing link">Newsletter</span>
+          <span class="fs-small text-white cursor link-ui" routerLink="/"
+            aria-label="Indus Yearbook routing link">Indus Yearbook</span>
+          <span class="fs-small text-white cursor link-ui" routerLink="/" aria-label="Campus Life routing link">Campus
+            Life</span>
+          <span class="fs-small text-white cursor link-ui" routerLink="/" aria-label="PAC routing link">PAC</span>
+        </div>
+      </div>
+      <div fxFlex.xs="calc(50% - 20px)" fxLayout="column" fxLayoutGap.gt-md="1.38vw" fxLayoutGap="20px">
+        <span class="fs-small text-accent fw-500">Admissions</span>
+        <div fxLayout="column" fxLayoutGap.gt-md="0.69vw" fxLayoutGap="10px">
+          <span class="fs-small text-white cursor link-ui" routerLink="/"
+            aria-label="Admission Process routing link">Admission Process</span>
+          <span class="fs-small text-white cursor link-ui" routerLink="/"
+            aria-label="Eligibility routing link">Eligibility</span>
+          <span class="fs-small text-white cursor link-ui" routerLink="/"
+            aria-label="Inquiry Form routing link">Inquiry Form</span>
+          <span class="fs-small text-white cursor link-ui" routerLink="/" aria-label="FAQ's routing link">FAQ's</span>
+          <span class="fs-small text-white cursor link-ui" routerLink="/"
+            aria-label="Testimonials routing link">Testimonials</span>
+        </div>
+      </div>
+      <div fxFlex.xs="calc(50% - 20px)" fxLayout="column" fxLayoutGap.gt-md="1.38vw" fxLayoutGap="20px">
+        <span class="fs-small text-accent fw-500">Beyond Academics</span>
+        <div fxLayout="column" fxLayoutGap.gt-md="0.69vw" fxLayoutGap="10px">
+          <span class="fs-small text-white cursor link-ui" routerLink="/"
+            aria-label="Whole Education routing link">Whole Education</span>
+          <span class="fs-small text-white cursor link-ui" routerLink="/"
+            aria-label="Leadership Curriculum routing link">Leadership Curriculum</span>
+        </div>
+      </div>
+      <div fxFlex.xs="calc(50% - 20px)" fxLayout="column" fxLayoutGap.gt-md="1.38vw" fxLayoutGap="20px">
+        <span class="fs-small text-accent fw-500">Curriculum</span>
+        <div fxLayout="column" fxLayoutGap.gt-md="0.69vw" fxLayoutGap="10px">
+          <span class="fs-small text-white cursor link-ui" routerLink="/"
+            aria-label="Programmes routing link">Programmes</span>
+          <span class="fs-small text-white cursor link-ui" routerLink="/" aria-label="SEL & ESL routing link">SEN &
+            ESL</span>
+        </div>
+      </div>
+
+    </div> -->
+  </div>
+  <mat-divider style="border-top:0.069vw solid lightgray"></mat-divider>
+  <div fxLayout="row" fxLayoutAlign="center center" fxLayoutAlign.xs="start start">
+    <span class="fs-x-small text-white ">Copyright (2022) Indus International School Pvt Ltd.</span>
+  </div>
+</div>

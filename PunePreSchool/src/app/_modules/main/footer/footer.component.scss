@@ -1,0 +1,39 @@
+.footer-bg {
+    background-color: var(--white-color);
+    background-image: url(../../../../assets/images/footer/footer-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: top;
+    padding: 100px 120px 10px 120px;
+    position: relative;
+    .footer-vector-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 150px;
+    }
+}
+@media (min-width: 960px) and (max-width: 1279px) {
+    .footer-bg {
+        padding: 80px 80px 10px 80px;
+    }
+}
+@media (min-width: 600px) and (max-width: 959px) {
+    .footer-bg {
+        padding: 40px 30px 10px 30px;
+    }
+}
+@media (max-width: 599px) {
+    .footer-bg {
+        padding: 40px 20px 10px 20px;
+    }
+}
+@media(min-width:1440px){
+    .footer-bg {
+        padding: 6.9vw 8.33vw 0.69vw 8.33vw;
+        .footer-vector-img {
+            width: 10.41vw;
+        }
+    }
+}
