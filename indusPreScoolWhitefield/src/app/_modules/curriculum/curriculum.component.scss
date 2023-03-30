@@ -1,0 +1,27 @@
+@import "../about-us/about-us.component.scss";
+.banner-bg {
+    background-image: url(../../../assets/images/banner-images/curriculum.jpg);
+}
+.mission-vision-bg {
+    background-image: url(../../../assets/images/curriculum/curriculum-div-bg.png);
+}
+.relative-img {
+    .overlay {
+        background: rgba(0, 0, 0, 0.2);
+    }
+}
+
+.SEN-ESL-bg{
+    background-image: url(../../../assets/images/curriculum/curriculum-SEN-ESL.png);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+@media screen and (min-width: 280px) and (max-width: 760px) {
+    .mission-vision-bg {
+        background-image: url(../../../assets/images/curriculum/curriculum-div-bg.png);
+        background-position: center;
+    }
+}

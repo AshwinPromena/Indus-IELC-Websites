@@ -1,0 +1,322 @@
+<mat-toolbar class="toolbar" fxLayout="row wrap"
+  fxLayoutAlign="space-between none">
+  <div fxFlex.gt-md="9.33vw" fxFlex="100px" fxFlex.lt-lg="80px"
+    fxLayoutAlign="center none" data-aos="fade-right"
+    data-aos-easing="ease-in-sine">
+    <a [routerLink]="['/']" routerLinkActive="router-link-active"
+      aria-label="home page link">
+      <img class="logoImg" src="../../../../assets/images/logos/logo.png"
+        alt="Indus Early Learning Centre logo">
+    </a>
+  </div>
+  <!-- <div fxFlex.gt-md="8.33vw" fxFlex="100px" fxFlex.lt-lg="80px" fxLayoutAlign="center none" data-aos="fade-right"  data-aos-easing="ease-in-sine">
+      <a [routerLink]="['/']" routerLinkActive="router-link-active" aria-label="home page link">
+          <img src="../../../../assets/images/logos/indus-elc-logo.png" alt="Indus Early Learning Centre logo"
+              width="100%">
+      </a>
+  </div> -->
+  <div fxLayout="row wrap" fxLayoutGap.gt-md="0.69vw" fxLayoutGap.md="10px"
+    fxLayoutAlign="start start"
+    class="nav-menus" fxHide.lt-md fxShow.gt-sm data-aos="fade-left"
+    data-aos-easing="ease-in-sine">
+    <!-- <button mat-button [routerLink]="['/']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:
+          true}" class="nav-main-li" aria-label="Home routing button" [disableRipple]="true">
+    Home
+  </button> -->
+    <button mat-button class="nav-main-li" [ngClass]="{'activeMenu':
+      curriculumTrigger1.menuOpen}"
+      (mouseenter)="mouseEnter(curriculumTrigger1)"
+      (mouseleave)="mouseLeave(curriculumTrigger1)" [routerLink]="['/home']"
+      routerLinkActive="router-link-active"
+      [matMenuTriggerFor]="curriculumMenu1" #curriculumTrigger1="matMenuTrigger"
+      aria-label="Home routing button">
+      Home
+    </button>
+    <mat-menu #curriculumMenu1="matMenu" [hasBackdrop]="false"
+      fxLayoutAlign="center center">
+      <span (mouseleave)="menuMouseLeave(curriculumTrigger1)"
+        (mouseenter)="trigger= 1">
+        <button class="menu-btn menu-list" [routerLink]="['/']" [queryParams]="{
+          contentView:'ABOUT' }"
+          routerLinkActive="router-link-active"
+          routerLinkActive="router-link-active" mat-menu-item
+          aria-label="Curriculum overview routing button">
+          <span>
+            About
+          </span>
+        </button>
+
+        <button class="menu-btn menu-list" [routerLink]="['/']" [queryParams]="{
+          contentView:'MISSION' }"
+          routerLinkActive="router-link-active" mat-menu-item aria-label="SEN &
+          ESL routing button">
+          <span>
+            Mission & Vision
+          </span>
+        </button>
+        <button class="menu-btn menu-list" [routerLink]="['/']" [queryParams]="{
+          contentView:'NEWSLETTER`S' }"
+          routerLinkActive="router-link-active" mat-menu-item aria-label="Age
+          criteria routing button">
+          <span>
+            Testimonials
+          </span>
+        </button>
+        <button class="menu-btn menu-list" [routerLink]="['/']" [queryParams]="{
+          contentView:'OUR INSTAWALL' }"
+          routerLinkActive="router-link-active" mat-menu-item aria-label="Age
+          criteria routing button">
+          <span>
+            Our Instawall
+          </span>
+        </button>
+        <button class="menu-btn menu-list" [routerLink]="['/']" [queryParams]="{
+          contentView:'TESTIMONIALS' }"
+          routerLinkActive="router-link-active" mat-menu-item aria-label="Age
+          criteria routing button">
+          <span>
+            Newsletter's
+          </span>
+        </button>
+      </span>
+    </mat-menu>
+
+
+
+
+
+    <button mat-button class="nav-main-li" [ngClass]="{'activeMenu':
+      curriculumTrigger.menuOpen}"
+      (mouseenter)="mouseEnter( curriculumTrigger)"
+      (mouseleave)="mouseLeave(curriculumTrigger)"
+      #curriculumTrigger="matMenuTrigger" [routerLink]="['/about-us']"
+      routerLinkActive="router-link-active"
+      [matMenuTriggerFor]="curriculumMenu" aria-label="Curriculum routing
+      button">About Us
+    </button>
+    <mat-menu #curriculumMenu="matMenu" [hasBackdrop]="false"
+      fxLayoutAlign="center center">
+      <span (mouseleave)="menuMouseLeave(curriculumTrigger)"
+        (mouseenter)="trigger= 1">
+        <button class="menu-btn menu-list" [routerLink]="['/about-us']"
+          [queryParams]="{ contentView:'History' }"
+          routerLinkActive="router-link-active" mat-menu-item
+          aria-label="Curriculum overview routing button">
+          <span>
+            History
+          </span>
+        </button>
+
+        <!-- <button class="menu-btn menu-list" [routerLink]="['/about-us']"
+          [queryParams]="{ contentView:'MISSION' }"
+          routerLinkActive="router-link-active" mat-menu-item aria-label="SEN &
+          ESL routing button">
+          <span>
+            Mission & Vision
+          </span>
+        </button> -->
+        <button class="menu-btn menu-list" [routerLink]="['/about-us']"
+          [queryParams]="{ contentView:'LEADERSHIP' }"
+          routerLinkActive="router-link-active" mat-menu-item aria-label="Age
+          criteria routing button">
+          <span>
+            Leadership
+          </span>
+        </button>
+        <button class="menu-btn menu-list" [routerLink]="['/about-us']"
+          [queryParams]="{ contentView:'CAMPUS' }"
+          routerLinkActive="router-link-active" mat-menu-item aria-label="Age
+          criteria routing button">
+          <span>
+            Campus
+          </span>
+        </button>
+        <button class="menu-btn menu-list" [routerLink]="['/about-us']"
+          [queryParams]="{ contentView:'INDUS' }"
+          routerLinkActive="router-link-active" mat-menu-item aria-label="Age
+          criteria routing button">
+          <span>
+            Indus Spotlights
+          </span>
+        </button>
+        <button class="menu-btn menu-list" [routerLink]="['/about-us']"
+          [queryParams]="{ contentView:'pac' }"
+          routerLinkActive="router-link-active" mat-menu-item aria-label="Age
+          criteria routing button">
+          <span>
+            PAC
+          </span>
+        </button>
+        <button class="menu-btn menu-list" [routerLink]="['/about-us']"
+          [queryParams]="{ contentView:'yearbook' }"
+          routerLinkActive="router-link-active" mat-menu-item aria-label="Age
+          criteria routing button">
+          <span>
+            Indus Year Book
+          </span>
+        </button>
+      </span>
+    </mat-menu>
+    <!--
+      <button mat-button [routerLink]="['/about-us']" routerLinkActive="router-link-active"
+          class="nav-main-li" aria-label="About us routing button" [disableRipple]="true">
+          About Us
+      </button> -->
+    <!-- <button mat-button [routerLink]="['/admissions']" routerLinkActive="router-link-active" class="nav-main-li"
+    aria-label="Admissions routing button" [disableRipple]="true">
+    Admissions
+  </button> -->
+    <button mat-button class="nav-main-li" [ngClass]="{'activeMenu':
+      curriculumTrigger2.menuOpen}"
+      (mouseenter)="mouseEnter(curriculumTrigger2)"
+      (mouseleave)="mouseLeave(curriculumTrigger2)"
+      [routerLink]="['/admissions']" routerLinkActive="router-link-active"
+      [matMenuTriggerFor]="curriculumMenu2"
+      #curriculumTrigger2="matMenuTrigger" aria-label="Home routing button">
+      Admissions
+    </button>
+    <mat-menu #curriculumMenu2="matMenu" [hasBackdrop]="false"
+      fxLayoutAlign="center center">
+      <span (mouseleave)="menuMouseLeave(curriculumTrigger2)"
+        (mouseenter)="trigger= 1">
+        <button class="menu-btn menu-list" [routerLink]="['/admissions']"
+          [queryParams]="{ contentView:'ADMISSIONS' }"
+          routerLinkActive="router-link-active" mat-menu-item
+          aria-label="Curriculum overview routing button">
+          <span>
+            Admissions Process
+          </span>
+        </button>
+
+        <button class="menu-btn menu-list" [routerLink]="['/admissions']"
+          [queryParams]="{ contentView:'ENQUIRY'}"
+          routerLinkActive="router-link-active" mat-menu-item aria-label="SEN &
+          ESL routing button">
+          <span>
+            Enquiry
+          </span>
+        </button>
+        <button class="menu-btn menu-list" [routerLink]="['/admissions']"
+          [queryParams]="{
+          contentView:'FAQ' }"
+          routerLinkActive="router-link-active" mat-menu-item aria-label="Age
+          criteria routing button">
+          <span>
+            FAQ's
+          </span>
+        </button>
+      </span>
+    </mat-menu>
+
+
+    <button mat-button [ngClass]="{'activeMenu':
+      curriculumTrigger1.menuOpen}"
+      (mouseenter)="mouseEnter(curriculumTrigger6)"
+      (mouseleave)="mouseLeave(curriculumTrigger6)"
+      [routerLink]="['/beyond-academics']"
+      routerLinkActive="router-link-active"
+      [matMenuTriggerFor]="curriculumMenu6" #curriculumTrigger6="matMenuTrigger"
+      class="nav-main-li"
+      aria-label="Beyond Academics routing button" [disableRipple]="true">
+      Beyond Academics
+    </button>
+    <!-- <button mat-button class="nav-main-li" [ngClass]="{'activeMenu':
+      curriculumTrigger2.menuOpen}"
+      (mouseenter)="mouseEnter(curriculumTrigger2)"
+      (mouseleave)="mouseLeave(curriculumTrigger2)"
+      [routerLink]="['/beyond-academics']" routerLinkActive="router-link-active"
+      [matMenuTriggerFor]="curriculumMenu2"
+      #curriculumTrigger2="matMenuTrigger" aria-label="Home routing button">
+      Beyond Academics
+    </button> -->
+    <mat-menu #curriculumMenu6="matMenu" [hasBackdrop]="false"
+      fxLayoutAlign="center center">
+      <span (mouseleave)="menuMouseLeave(curriculumTrigger6)"
+        (mouseenter)="trigger= 1">
+        <button class="menu-btn menu-list" [routerLink]="['/beyond-academics']"
+          [queryParams]="{ contentView:'whole-education' }"
+          routerLinkActive="router-link-active" mat-menu-item
+          aria-label="Curriculum overview routing button">
+          <span>
+            Whole Education
+          </span>
+        </button>
+
+        <button class="menu-btn menu-list" [routerLink]="['/beyond-academics']"
+          [queryParams]="{ contentView:'leadership-curriculum'}"
+          routerLinkActive="router-link-active" mat-menu-item aria-label="SEN &
+          ESL routing button">
+          <span>
+            LeaderShip Curriculum
+          </span>
+        </button>
+
+      </span>
+    </mat-menu>
+
+    <button mat-button [routerLink]="['/curriculum']"
+      (mouseenter)="mouseEnter(curriculumTrigger7)"
+      (mouseleave)="mouseLeave(curriculumTrigger7)"
+      routerLinkActive="router-link-active"
+      [matMenuTriggerFor]="curriculumMenu7" #curriculumTrigger7="matMenuTrigger"
+      routerLinkActive="router-link-active" class="nav-main-li"
+      aria-label="Curriculum routing button" [disableRipple]="true">
+      Curriculum
+    </button>
+    <mat-menu #curriculumMenu7="matMenu" [hasBackdrop]="false"
+      fxLayoutAlign="center center">
+      <span (mouseleave)="menuMouseLeave(curriculumTrigger7)"
+        (mouseenter)="trigger= 1">
+        <button class="menu-btn menu-list" [routerLink]="['/curriculum']"
+          [queryParams]="{ contentView:'curriculum' }"
+          routerLinkActive="router-link-active" mat-menu-item
+          aria-label="Curriculum overview routing button">
+          <span>
+            Curriculum
+          </span>
+        </button>
+
+        <button class="menu-btn menu-list" [routerLink]="['/curriculum']"
+          [queryParams]="{ contentView:'IELC'}"
+          routerLinkActive="router-link-active" mat-menu-item aria-label="SEN &
+          ESL routing button">
+          <span>
+            Learning Areas
+          </span>
+        </button>
+        <button class="menu-btn menu-list" [routerLink]="['/curriculum']"
+          [queryParams]="{ contentView:'Programmes'}"
+          routerLinkActive="router-link-active" mat-menu-item aria-label="SEN &
+          ESL routing button">
+          <span>
+            Programmes
+          </span>
+        </button>
+        <button class="menu-btn menu-list" [routerLink]="['/curriculum']"
+          [queryParams]="{ contentView:'Age-criteria'}"
+          routerLinkActive="router-link-active" mat-menu-item aria-label="SEN &
+          ESL routing button">
+          <span>
+            Age Criteria
+          </span>
+        </button>
+
+      </span>
+    </mat-menu>
+
+    <button mat-button [routerLink]="['/contact-us']"
+      routerLinkActive="router-link-active" class="nav-main-li"
+      aria-label="Contact Us routing button" [disableRipple]="true">
+      Contact Us
+    </button>
+
+
+  </div>
+  <div class="nav-menus" fxShow.lt-md fxHide.gt-sm>
+    <button mat-icon-button class="text-white" (click)="toggle.emit()"
+      aria-label="toggle side nav button">
+      <mat-icon>menu</mat-icon>
+
+    </button>
+  </div>
+</mat-toolbar>

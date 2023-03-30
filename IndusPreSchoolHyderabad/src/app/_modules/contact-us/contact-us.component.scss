@@ -1,0 +1,60 @@
+@import "../about-us/about-us.component.scss";
+.banner-bg {
+    background-image: url(../../../assets/images/contact-us/contact-us-banner-bg.jpg);
+}
+.relative-img {
+    z-index: 0;
+    .overlay {
+        background: #2f485880;
+    }
+}
+.contact-us-form-div {
+    margin-top: -10.4vw;
+    z-index: 1;
+}
+.banner-sticky-div {
+    position: fixed;
+    z-index: 1000;
+    right: 0px;
+    bottom: 20%;
+    top:50%;
+}
+.banner-sticky-btn {
+    background-color: white;
+    padding: 10px 15px;
+    color: #024f2d;
+    border-radius: 10px 0px 0px 0px;
+    border: 1px solid var(--accent-color);
+    border-right: 0px;
+    cursor: pointer;
+}
+::ng-deep {
+    .contact-us-form {
+        padding: 30px;
+        background: white;
+        border-radius: 20px;
+        position: relative;
+        min-width: 50%;
+        .mat-form-field-infix {
+            border-top: 0.4375em solid transparent;
+        }
+        .mat-form-field-appearance-outline .mat-form-field-outline {
+            color: rgb(0 0 0 / 0%);
+            background-color: var(--primary-lighter-color);
+            border-radius: 5px;
+        }
+        .form-vector-img {
+            position: absolute;
+            bottom: -10px;
+            right: -30px;
+            width: 60px;
+            margin-bottom: 0px !important;
+        }
+    }
+}
+@media(max-width:599px){
+    .form-vector-img {
+        display:none;
+    }
+}
+

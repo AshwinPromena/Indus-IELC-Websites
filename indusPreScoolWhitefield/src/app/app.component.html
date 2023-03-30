@@ -1,0 +1,30 @@
+<mat-sidenav-container>
+  <mat-sidenav #drawer mode="over" fixedInViewport style="width:100%;background: #eef2fbce;">
+    <app-side-navigation (toggle)="drawer.toggle()"></app-side-navigation>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-header (toggle)="drawer.toggle()"></app-header>
+    <div class="outlet">
+      <router-outlet></router-outlet>
+    </div>
+    <app-footer></app-footer>
+    <div class="chat-icon mat-elevation-z5" *ngIf="isVisibleChatIcon " data-aos="fade-up" data-aos-offset="0"
+    (click)="viewChat()">
+    <mat-icon>chat</mat-icon>
+  </div>
+  <div class="chat-message-pop mat-elevation-z5 cursor" *ngIf="isVisibleMessageBox" data-aos="fade-up"
+    data-aos-offset="0" (click)="viewChat()">
+    <div fxLayout="column" class="message-box">
+      <span class="f-lato">Hi! Welcome to Indus International School, India's best ranking
+        international
+        day-cum-boarding
+        school.</span>
+      <span class="f-lato">At Indus, we create leaders of tomorrow. How can I help you today ?</span>
+      <button mat-icon-button (click)="close()">
+        <mat-icon>cancel</mat-icon>
+      </button>
+    </div>
+  </div>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

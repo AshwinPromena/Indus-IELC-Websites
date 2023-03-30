@@ -1,0 +1,406 @@
+<div class="banner-bg" fxLayoutAlign="center center">
+  <span class="text-white fs-xlg fw-500  text-a-c" data-aos="fade-up" data-aos-duration="600"
+    data-aos-easing="ease-in-sine" data-aos-delay="100">Creating Leaders of Tomorrow</span>
+  <div class="banner-sticky-div" fxLayout="column" fxLayoutGap="20px">
+    <!-- <div fxLayout="row nowrap" fxLayoutGap="10px" class="banner-sticky-btn" [routerLink]="['/contact-us']"
+      routerLinkActive="router-link-active">
+      <mat-icon>edit_document</mat-icon>
+      <span class="fs-x-small fw-600">Apply</span>
+    </div> -->
+    <div fxLayout="row nowrap" fxLayoutGap="10px" class="banner-sticky-btn" (click)="enquireForm()">
+      <mat-icon>info_outline</mat-icon>
+      <span class="fs-x-small fw-600">Enquire</span>
+    </div>
+  </div>
+</div>
+<div class="section-lg-pad about" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="start center"
+  fxLayoutGap.gt-md="2.34vw" fxLayoutGap.md="30px" fxLayoutGap.sm="20px" fxLayoutGap.xs="30px">
+  <div fxFlex="" fxLayout="column" fxLayoutGap.gt-md="1.38vw" fxLayoutGap="20px" fxLayoutGap.lt-md="10px">
+    <div fxLayout="column" fxLayoutGap.gt-md="0.69vw" fxLayoutGap="10px" fxLayoutGap.lt-md="5px">
+      <span class="fs-xlg text-accent text-tr-u fw-600" data-aos="fade-right" data-aos-delay="300"
+        data-aos-easing="ease-in-sine">About Indus</span>
+      <span class="fs-lg text-primary text-tr-u fw-600 " data-aos="fade-right" data-aos-delay="400"
+        data-aos-easing="ease-in-sine">personalised care for Your child</span>
+    </div>
+    <span class="fs-small text-a-j" data-aos="fade-right" data-aos-delay="500" data-aos-easing="ease-in-sine">Welcome
+      to Indus Early Learning Centre, started in June 2011, at Whitefield, Bangalore by the Indus Trust. The school
+      caters to pre-primary education for children below the age of 7 years.</span>
+    <div data-aos="fade-right" data-aos-delay="600" data-aos-easing="ease-in-sine">
+      <button mat-raised-button color="primary" class="submit-btn mat-elevation-z1" routerLink="/about-us">Learn
+        More</button>
+    </div>
+  </div>
+  <div fxFlex="" data-aos="fade-left" data-aos-delay="300" data-aos-easing="ease-in-sine">
+    <img src="../../../assets/images/home/about-indus.jpg" alt="about indus image" width="100%" aTilt>
+  </div>
+</div>
+
+<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="center center" fxLayoutGap="60px" fxLayoutGap.lt-sm="20px">
+  <div class="download-btn"> 
+    <a mat-raised-button class="download-btn fs-small text-white" color="accent" aria-label="Download brochure"
+    href="https://indusschool.s3.ap-south-1.amazonaws.com/Whitefield/IELC+Whitefield+Brochure+Updated.pdf" target="_blank">
+      Our Brochure</a>
+  </div>
+  <div class="download-btn">
+    <a mat-raised-button class="download-btn fs-small text-white" color="accent" aria-label="Watch Virtual Tour"
+    href="https://indusschool.s3.ap-south-1.amazonaws.com/Whitefield/IELCW+Campus+walkthrough.mp4" target="_blank">
+      Virtual Tour</a>
+  </div>
+</div>
+
+<div class="section-lg-pad funAndStuday" fxLayout="column" fxLayoutGap.gt-md="3.47vw" fxLayoutGap="50px">
+  <span class="fs-lg text-primary fw-600  text-a-c" data-aos="fade-up" data-aos-delay="300"
+    data-aos-easing="ease-in-sine">IELC Whitefield Grade Briefs</span>
+  <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="start start" fxLayoutAlign.xs="center center"
+    fxLayoutGap.gt-md="1.38vw" fxLayoutGap="20px">
+    <div fxFlex="" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap.gt-md="1.38vw" fxLayoutGap="20px"
+      fxLayoutGap.xs="10px" *ngFor="let grade of grades">
+      <img [src]="grade.image" [alt]="grade.alt" width="60%" data-aos="fade-up" data-aos-delay="400"
+        data-aos-easing="ease-in-sine">
+      <div fxLayout="column" fxLayoutGap="5px">
+        <span class="fs-small fw-500 text-a-c" data-aos="fade-up" data-aos-delay="500"
+          data-aos-easing="ease-in-sine">{{grade.gradeName}}</span>
+        <span class="text-gray fs-small  text-a-c" data-aos="fade-up" data-aos-delay="600"
+          data-aos-easing="ease-in-sine">{{grade.year}}</span>
+      </div>
+    </div>
+  </div>
+  <div fxLayoutAlign="center center" data-aos="fade-up" data-aos-delay="700" data-aos-easing="ease-in-sine">
+    <button mat-raised-button [routerLink]="'/curriculum'" [queryParams]="{ contentView:'gradeDetails' }"
+      color="primary" class="submit-btn mat-elevation-z1" aria-label="know more button">Know
+      More</button>
+  </div>
+  <div class="fs-small fw-500" fxLayoutAlign="center center" data-aos="fade-up" data-aos-delay="800" data-aos-easing="ease-in-sine">
+  <p>Age Criteria to be met by 30th of september</p>
+  </div>
+</div>
+<div class="section-sm-pad" fxLayout="row wrap" fxLayout.lt-md="column-reverse" fxLayoutAlign="start center"
+  fxLayoutGap.gt-md="2.34vw" fxLayoutGap.lt-lg="30px">
+  <div fxFlex="" fxFlex.md="500px" fxLayout="row">
+    <div fxFlex="100%" fxFlex.sm="75%" style="position:relative">
+      <img src="../../../assets/images/home/submission-form-image.png" alt="Submission form image" width="100%"
+        fxHide.xs fxShow.gt.xs>
+      <div [formGroup]="funClassSubmissionForm" fxLayout="column" class="fun-class-form">
+        <!-- <div fxLayout="row wrap" fxLayoutGap.gt-md="0.69vw" fxLayoutGap="10px">
+          <div fxFlex.gt-md="calc(50% - 0.69vw)" fxFlex="calc(50% - 10px)" fxLayout="column">
+            <span class="fs-x-small text-primary fw-500">Parent's Name</span>
+            <mat-form-field appearance="outline">
+              <input matInput formControlName="parentsName" aria-label="parentsName" required>
+              <mat-error *ngIf="funClassSubmissionForm.get('parentsName').hasError('required')">
+                Parent name is required
+              </mat-error>
+              <mat-error
+                *ngIf="!funClassSubmissionForm.get('parentsName')?.hasError('required') && funClassSubmissionForm.get('parentsName')?.hasError('minlength') && !funClassSubmissionForm.get('parentName')?.hasError('maxlength')">
+                At least 3 characters
+              </mat-error>
+              <mat-error
+                *ngIf="!funClassSubmissionForm.get('parentsName')?.hasError('required') && !funClassSubmissionForm.get('parentsName')?.hasError('minlength') && funClassSubmissionForm.get('parentName')?.hasError('maxlength')">
+                At most 30 characters
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div fxFlex.gt-md="calc(50% - 0.69vw)" fxFlex="calc(50% - 10px)" fxLayout="column">
+            <span class="fs-x-small text-primary fw-500">Phone</span>
+            <mat-form-field appearance="outline">
+              <input matInput formControlName="mobileNumber" aria-label="phone" minlength="10" maxlength="10"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required>
+              <mat-error *ngIf="funClassSubmissionForm.get('mobileNumber')?.hasError('required')">
+                Phone Number is required
+              </mat-error>
+              <mat-error
+                *ngIf="funClassSubmissionForm.get('mobileNumber').hasError('pattern') && funClassSubmissionForm.get('mobileNumber').touched">
+                Please enter valid phone no</mat-error>
+            </mat-form-field>
+          </div>
+        </div> -->
+        <!-- <div fxLayout="column">
+          <span class="fs-x-small text-primary fw-500">Email</span>
+          <mat-form-field appearance="outline">
+            <input matInput formControlName="emailId" aria-label="emailId" required>
+            <mat-error *ngIf="funClassSubmissionForm.get('emailId').hasError('required')">
+              Email Id is required
+            </mat-error>
+            <mat-error
+              *ngIf="!funClassSubmissionForm.get('emailId').hasError('required') && funClassSubmissionForm.get('emailId').hasError('email')">
+              Please enter valid email
+            </mat-error>
+          </mat-form-field>
+        </div> -->
+        <!-- <div fxLayout="row wrap" fxLayoutGap.gt-md="0.69vw" fxLayoutGap="10px">
+          <div fxFlex.gt-md="calc(50% - 0.69vw)" fxFlex="calc(50% - 10px)" fxLayout="column">
+            <span class="fs-x-small text-primary fw-500">Child's Name</span>
+            <mat-form-field appearance="outline">
+              <input matInput formControlName="firstName" aria-label="firstName" required>
+              <mat-error *ngIf="funClassSubmissionForm.get('firstName').hasError('required')">
+                Child name is required
+              </mat-error>
+              <mat-error
+                *ngIf="!funClassSubmissionForm.get('firstName')?.hasError('required') && funClassSubmissionForm.get('firstName')?.hasError('minlength') && !funClassSubmissionForm.get('firstName')?.hasError('maxlength')">
+                At least 3 characters
+              </mat-error>
+              <mat-error
+                *ngIf="!funClassSubmissionForm.get('firstName')?.hasError('required') && !funClassSubmissionForm.get('firstName')?.hasError('minlength') && funClassSubmissionForm.get('firstName')?.hasError('maxlength')">
+                At most 30 characters
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div fxFlex.gt-md="calc(50% - 0.69vw)" fxFlex="calc(50% - 10px)" fxLayout="column">
+            <span class="fs-x-small text-primary fw-500">Academic Year</span>
+            <mat-form-field appearance="outline" fxFlex="calc(50% - 20px)" fxFlex.lt-sm="100%">
+              <mat-select formControlName="academicYearId" aria-label="Academic Year">
+                <mat-option *ngFor="let item of AcademicYear" [value]="item.academicYearId">
+                  {{ item.academicYear}}
+                </mat-option>
+              </mat-select>
+              <mat-error *ngIf="funClassSubmissionForm.get('academicYearId').hasError('required')">Academic Years is
+                required*
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div> -->
+        <!-- <div fxLayout="column">
+          <span class="fs-x-small text-primary fw-500">Message</span>
+          <mat-form-field appearance="outline">
+            <input matInput formControlName="messageBox" aria-label="message">
+          </mat-form-field>
+        </div> -->
+        <!-- <button mat-raised-button color="primary" class="submit-btn mat-elevation-z1" (click)="onSubmit()"
+          [disabled]="isLoading">
+          <mat-icon *ngIf="isLoading">
+            <mat-spinner color="primary" diameter="20">
+            </mat-spinner>
+          </mat-icon>
+          {{isLoading? 'uploading' : 'Submit'}}
+        </button> -->
+        <iframe src="https://ielcw.schoolelement.in/iisb_contact_form" height="500px"></iframe>
+      </div>
+    </div>
+  </div>
+  <div fxFlex="" fxFlex.sm="100%" fxLayout="column" fxLayoutGap.gt-md="0.69vw" fxLayoutGap="10px">
+    <div fxLayout="column" fxLayoutGap.gt-md="0.69vw" fxLayoutGap="10px" fxLayoutGap.lt-md="5px">
+      <span class="fs-xlg  text-accent text-tr-u fw-600 " data-aos="fade-left" data-aos-delay="300"
+        data-aos-easing="ease-in-sine">ONLINE SUBMISSION</span>
+      <span class="fs-lg text-primary text-tr-u fw-600 " data-aos="fade-left" data-aos-delay="400"
+        data-aos-easing="ease-in-sine">Join our fun class with other classmate</span>
+    </div>
+    <span class="fs-small text-a-j" data-aos="fade-left" data-aos-delay="500" data-aos-easing="ease-in-sine">The school
+      caters to pre-primary education for children below the age of 7 years</span>
+    <div data-aos="fade-left" data-aos-delay="600" data-aos-easing="ease-in-sine">
+      <button mat-raised-button color="primary" class="submit-btn mat-elevation-z1" aria-label="contact us button"
+        [routerLink]="['/contact-us']" routerLinkActive="router-link-active">Contact Us</button>
+    </div>
+  </div>
+</div>
+<div class="mission-vision-bg section-lg-pad" fxLayout="row wrap" fxLayout.xs="column-reverse"
+  fxLayoutAlign="start center" fxLayoutGap.gt-md="2.34vw" fxLayoutGap.md="30px" fxLayoutGap.sm="20px"
+  fxLayoutGap.xs="30px" style="position:relative">
+  <div class="vision-vector-img">
+    <img src="../../../assets/images/home/vision-vector-image.png" alt="vision vector image" width="100%">
+  </div>
+  <div fxFlex="" fxLayoutAlgn="center center" data-aos="fade-right" data-aos-delay="300" data-aos-easing="ease-in-sine">
+    <img src="../../../assets/images/home/mission-vision.png" alt="Vision image" width="90%" aTilt>
+  </div>
+  <div fxFlex="" fxLayout="column" fxLayoutGap.gt-md="1.04vw" fxLayoutGap="15px">
+    <div fxLayout="column" fxLayoutGap.gt-md="0.69vw" fxLayoutGap="10px" fxLayoutGap.lt-md="5px">
+      <span class="fs-xlg  text-accent text-tr-u fw-600 " data-aos="fade-left" data-aos-delay="300"
+        data-aos-easing="ease-in-sine">OUR VALUE</span>
+      <span class="fs-lg text-white fw-600 " data-aos="fade-left" data-aos-delay="400"
+        data-aos-easing="ease-in-sine">Better Future through Play</span>
+    </div>
+    <span class="fs-small text-white text-a-j" data-aos="fade-left" data-aos-delay="500"
+      data-aos-easing="ease-in-sine">Indus Early Learning Centre also serves as a feeder school to Indus International
+      School Bangalore</span>
+    <div class="vision-div" fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap.gt-md="1.38vw"
+      fxLayoutGap="20px" data-aos="fade-left" data-aos-delay="600" data-aos-easing="ease-in-sine">
+      <div fxFlex.gt-md="3.47vw" fxFlex="50px" class="vision-icon" fxLayoutAlign="center center">
+        <mat-icon color="accent">visibility</mat-icon>
+      </div>
+      <div fxFlex="" fxLayout="column">
+        <span class="fs-md fw-500 text-accent">Vision</span>
+        <span class="fs-small text-white">To create global citizens and leaders of tomorrow through values of
+          love, empathy, discipline & respect. 21st century who think globally and act locally</span>
+      </div>
+    </div>
+    <div class="mission-div" fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap.gt-md="1.38vw"
+      fxLayoutGap="20px" data-aos="fade-left" data-aos-delay="700" data-aos-easing="ease-in-sine">
+      <div fxFlex.gt-md="3.47vw" fxFlex="50px" class="mission-icon" fxLayoutAlign="center center">
+        <mat-icon>flag</mat-icon>
+      </div>
+      <div fxFlex="" fxLayout="column">
+        <span class="fs-md fw-500 text-green">Mission</span>
+        <span class="fs-small text-white">To reate life entrepreneurs through holistic education & lifelong
+          learning</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section-lg-pad" fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutAlign.xs="start start"
+  fxLayoutGap.gt-md="2.34vw" fxLayoutGap.lt-lg="30px" fxLayoutGap.xs="0px">
+  <div fxFlex="calc(35% - 2.34vw)" fxFlex.sm="calc(50% - 30px)" fxFlex.xs="100%" fxLayout="column" fxLayoutGap="10px">
+    <div fxLayout="column" fxLayoutGap.gt-md="0.69vw" fxLayoutGap="10px" fxLayoutGap.lt-md="5px">
+      <span class="fs-xlg  text-accent text-tr-u fw-600 ">Testimonials</span>
+      <span class="fs-lg text-primary text-tr-u fw-600 ">Parent say about Indus</span>
+    </div>
+    <div fxLayout="row wrap" fxLayoutGap.gt-md="1.04vw" fxLayoutGap="15px" class="b-1lc p-15 br-10 mat-elevation-z1">
+      <a href="https://www.google.com/search?q=whitefield+indus+school&rlz=1C1CHBF_enIN1015IN1015&oq=whitefield+indus+school&aqs=chrome..69i57j69i22i30i59j0i22i30j0i390l2j69i60l3.13420j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3bae11ffe86c6d57:0xfead6affcae729a2,1,,,"
+        target="blank" style="text-decoration: none;"><span class="fs-xlg text-accent fw-600">4.8</span></a>
+      <div style="border-right:1px solid lightgray"></div>
+      <div fxLayout="column">
+        <a href="https://www.google.com/search?q=whitefield+indus+school&rlz=1C1CHBF_enIN1015IN1015&oq=whitefield+indus+school&aqs=chrome..69i57j69i22i30i59j0i22i30j0i390l2j69i60l3.13420j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3bae11ffe86c6d57:0xfead6affcae729a2,1,,,"
+          target="blank" style="text-decoration: none;">
+          <span class="fs-small text-primary fw-500">(50+ Reviews) </span></a>
+      </div>
+    </div>
+  </div>
+
+  <div fxFlex="calc(65% - 2.34vw)" fxFlex.sm="calc(50% - 30px)" fxFlex.xs="100%" fxLayout="column" class="p-15">
+    <owl-carousel-o [options]="testimonialOptions">
+      <ng-container *ngFor="let item of testimonials">
+        <ng-template carouselSlide>
+          <div fxLayout="column" fxLayoutGap.gt-md="1.04vw" fxLayoutGap="15px">
+            <div class="b-1lc p-15 br-10 bg-light-primary">
+              <span class="fs-x-small text-primary">{{item.description}}</span>
+            </div>
+            <div fxLayout="row nowrap" fxLayoutAlign="start center" fxLayoutGap.gt-md="0.69vw" fxLayoutGap="10px">
+              <div fxFlex.gt-md="3.4vw" fxFlex="50px">
+                <img [src]="item.image" [alt]="item.alt" width="100%" class="br-50">
+              </div>
+              <span class="fs-small text-accent fw-500">{{item.name}}</span>
+            </div>
+            <div fxLayoutAlign="space-between none">
+              <span class="fs-x-smaller text-green fw-500"></span>
+              <span class="fs-x-smaller text-green fw-500" (click)="viewTestimonials(item.id)">Read More</span>
+            </div>
+          </div>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </div>
+</div>
+
+<div class="happy-environ-pad HappyEnvinorment" fxLayout="column" fxLayoutGap.gt-md="2.04vw" fxLayoutGap="30px">
+  <div class="vision-vector-img1" fxHide.lt-md fxHide.lt-sm>
+    <img src="../../../assets/images/home/green-egle.png" width="100%">
+  </div>
+  <!-- <div class="vector-icon-1" data-aos="fade-down" data-aos-delay="300" data-aos-easing="ease-in-sine">
+        <img src="../../../assets/images/home/environ-vector-1.png" alt="happy environ vector image 1" width="100%">
+    </div>
+    <div class="vector-icon-2" data-aos="fade-down" data-aos-delay="400" data-aos-easing="ease-in-sine">
+        <img src="../../../assets/images/home/environ-vector-2.png" alt="happy environ vector image 2" width="100%">
+    </div>
+    <div class="vector-icon-3" data-aos="fade-down" data-aos-delay="500" alt="happy environ vector image 3"
+        data-aos-easing="ease-in-sine">
+        <img src="../../../assets/images/home/environ-vector-3.png" width="100%">
+    </div> -->
+  <div fxLayout="column" fxLayoutGap.gt-md="1.04vw" fxLayoutGap="15px" fxLayoutGap.lt-lg="10px">
+    <span class="fs-xlg text-accent text-tr-u text-a-c fw-600" data-aos="fade-up" data-aos-delay="300"
+      data-aos-easing="ease-in-sine">HAPPY ENVIRONMENT</span>
+    <span class="fs-lg text-primary text-tr-u text-a-c fw-600 " data-aos="fade-up" data-aos-delay="400"
+      data-aos-easing="ease-in-sine">OUR INSTAWALL</span>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="space-between center" fxLayoutGap.gt-md="2.04vw grid"
+    fxLayoutGap.lt-lg="20px grid" fxLayoutGap.xs="10px grid">
+    <div fxFlex="calc(33% - 2.04vw)" fxFlex.lt-lg="calc(33% - 20px)" fxFlex.xs="calc(50% - 10px)"
+      *ngFor="let item of happyEnvironment" data-aos="zoom-in" data-aos-delay="500" data-aos-easing="ease-in-sine">
+      <img [src]="item.image" [alt]="item.alt" width="100%" class="br-10" aTilt>
+    </div>
+  </div>
+</div>
+
+<div class="section-lg-pad" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="start start"
+  fxLayoutGap.gt-md="2.34vw" fxLayoutGap.md="30px" fxLayoutGap.sm="20px" fxLayoutGap.xs="30px">
+  <div fxFlex="" data-aos="fade-right" data-aos-delay="300" data-aos-easing="ease-in-sine">
+    <img src="../../../assets/images/home/ceo.jpg" alt="CEO of indus" width="100%">
+  </div>
+  <div fxFlex="" fxLayout="column" fxLayoutGap.gt-md="0.69vw" fxLayoutGap="10px">
+    <div fxLayout="column" fxLayoutGap.gt-md="0.69vw" fxLayoutGap="10px" fxLayoutGap.lt-md="5px">
+      <span class="fs-xlg text-accent text-tr-u fw-600" data-aos="fade-left" data-aos-delay="300"
+        data-aos-easing="ease-in-sine">From the CEO/ MD's desk</span>
+      <span class="fs-md text-primary text-tr-u fw-600 " data-aos="fade-left" data-aos-delay="400"
+        data-aos-easing="ease-in-sine">LT. GENERAL ARJUN RAY, PVSM, VSM (RETD.)</span>
+    </div>
+    <span class="fs-small text-a-j" data-aos="fade-left" data-aos-delay="600" data-aos-easing="ease-in-sine">&#8220;
+      It is for the first time that all Indus schools are ranked within the first four in India in the International School - Day-cum-Boarding category. No other family of schools can boast of such a distinction. Indus Bangalore retains its #1 position for the 11th consecutive year, a rare feat indeed. Indus Pune and Indus Hyderabad are tied at #4. Even the fledgling Indus Altum International School, Belgavi, is ranked #10 in the first two years of its raising. 
+      There is an Indus Code no school has been able to crack all these years. Our eminent leadership position in the family of international schools, affirms two fundamental strategies:
+      </span>
+   
+    <div fxLayout="column" *ngIf="readMore2">
+      <div fxLayout="row" fxLayoutGap="15px">
+        <span class="fs-small text-a-j">&bull;</span>
+        <span class="fs-small text-a-j">First,  in a highly competitive market, an organisation must continue to create and not compete. </span>
+      </div>
+      <div fxLayout="row" fxLayoutGap="15px">
+        <span class="fs-small text-a-j">&bull;</span>
+        <span class="fs-small text-a-j">Second, to create and to be ahead of the curve, the organisation must collaborate to create an ecosystem with industry, EdTech companies, other schools, universities, and research establishments.  </span>
+      </div>
+      <div fxLayout="row" fxLayoutGap="15px">
+        <span class="fs-small text-a-j">&bull;</span>
+        <span class="fs-small text-a-j">On the creativity front, we have developed the AI-Assistant to collaborate with teacher and students, the StartupYou, and now the upcoming  School of the Future called 10 X.  </span>
+      </div>
+      
+    </div>
+    <div class="readMore-pad">
+      <button mat-raised-button class="submit-btn mat-elevation-z1" color="accent"
+        (click)="readMore2 = !readMore2">{{readMore2? 'Read Less': 'Read More'}}</button>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="end end" data-aos="fade-left" data-aos-delay="700"
+      data-aos-easing="ease-in-sine">
+      <div fxLayout="column" fxLayoutAlign="center start">
+        <span class="fw-500">With warm regards,</span>
+        <img src="../../../assets/images/home/signature.jpg" alt="ceo signature" class="ceo-signature">
+      </div>
+    </div>
+  </div>
+
+  <!-- <div fxFlex="" fxLayout="column" fxLayoutGap.gt-md="0.69vw" fxLayoutGap="10px">
+    <div fxLayout="column" fxLayoutGap.gt-md="0.69vw" fxLayoutGap="10px" fxLayoutGap.lt-md="5px">
+      <span class="fs-small text-accent text-tr-u fw-500 " data-aos="fade-left" data-aos-delay="300"
+        data-aos-easing="ease-in-sine">From the CEO/ MD's desk</span>
+      <span class="fs-md text-primary text-tr-u fw-600 " data-aos="fade-left" data-aos-delay="400"
+        data-aos-easing="ease-in-sine">LT. GENERAL ARJUN RAY, PVSM, VSM (RETD.)</span>
+    </div>
+    <span class="fs-small text-a-j" data-aos="fade-left" data-aos-delay="600" data-aos-easing="ease-in-sine">“The
+      success of education in the 21st century will depend a lot upon student
+      agency, students who take responsibility and ownership for their entire learning process. Student agency is
+      also the capacity to set challenging goals, reflect and act responsibly. At Indus, we believe, that teachers
+      must become their students; and students must become their teachers. This is the bottom line for dealing
+      with reskilling revolution we are in the midst of”</span>
+    <div fxLayout="row" fxLayoutAlign="end end" data-aos="fade-left" data-aos-delay="700"
+      data-aos-easing="ease-in-sine">
+      <div fxLayout="column" fxLayoutAlign="center start">
+        <span class="fw-500">With warm regards,</span>
+        <img src="../../../assets/images/home/signature.jpg" alt="ceo signature" class="ceo-signature">
+      </div>
+    </div>
+  </div> -->
+</div>
+<div class="section-lg-pad" fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap.gt-md="2.34vw"
+  fxLayoutGap.lt-lg="30px" fxLayoutGap.xs="0px">
+  <div fxFlex="calc(35% - 2.34vw)" fxFlex.sm="calc(40% - 30px)" fxFlex.xs="100%" fxLayout="column"
+    fxLayoutGap.gt-md="0.69vw" fxLayoutGap="10px">
+    <div fxLayout="column" fxLayoutGap.gt-md="0.69vw" fxLayoutGap="10px" fxLayoutGap.lt-md="5px">
+      <span class="fs-xlg text-accent text-tr-u fw-600">UPDATE</span>
+      <span class="fs-lg text-primary text-tr-u fw-600 ">Newsletters</span>
+    </div>
+    <span class="fs-small text-a-j">HOC Monthly Newsletter for the months</span>
+
+  </div>
+  <div fxFlex="calc(65% - 2.34vw)" fxFlex.sm="calc(60% - 30px)" fxFlex.xs="100%" class="p-15">
+    <owl-carousel-o [options]="newsOptions">
+      <ng-template carouselSlide *ngFor="let item of news" class="mat-elevation-z1">
+        <div class="b-1lc br-10 " fxLayout="column">
+          <div class="p-10">
+            <span class="fs-x-small ">{{item.description}}</span>
+          </div>
+          <a [href]="item.link" target="_blank">
+            <img [src]="item.image" [alt]="item.alt" width="100%">
+          </a>
+          <div class="p-15 bg-accent" style="border-radius:0px 0px 0.69vw 0.69vw">
+            <span class="fs-small text-white"> <a [href]="item.link" class="text-white" style="text-decoration: none;"
+                target="_blank">Preview Newsletters</a></span>
+          </div>
+        </div>
+      </ng-template>
+    </owl-carousel-o>
+  </div>
+</div>

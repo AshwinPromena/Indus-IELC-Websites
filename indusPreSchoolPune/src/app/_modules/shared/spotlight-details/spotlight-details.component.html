@@ -1,0 +1,20 @@
+<div fxLayout="column" fxLayout.xs="column" fxLayoutAlign="center start" fxLayoutGap.gt-md="10px"
+    fxLayoutAlign.lt-md="10px" fxHide.xs fxShow.gt-xs>
+    <button mat-icon-button matDialogClose style="
+      position: absolute;
+      top: -25px;
+      right: -55px;
+      background-color: white;
+    " class="mat-elevation-z0">
+        <mat-icon>close</mat-icon>
+    </button>
+
+    <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+        <p class="fs-md text-accent text-tr-u fw-600 text-a-c"
+        [matTooltip]="selectedData?.description?.length > 7 ? selectedData?.description : ''">
+            {{ selectedData?.title }}
+        </p>
+        
+        <p class="fs-small fw-500 text-a-j">{{ selectedData?.description }}</p>
+    </div>
+</div>

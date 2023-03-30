@@ -1,0 +1,189 @@
+<div matDialogTitle fxLayout="row nowrap" fxLayoutAlign="space-between start"
+    class="chat-bot-header f-lato mat-elevation-z5">
+    <div fxLayout="row nowrap" fxLayoutGap="10px" fxLayoutAlign="start center">
+        <div fxFlex="80px" class="logo-avatar" fxLayoutAlign="center center">
+            <img src="../../../../assets/images/chatbot/logo.png" width="100%" alt="indus logo">
+        </div>
+        <div fxLayout="column" fxLayoutGap="5px">
+            <span class="fs-md fw-600 f-lato">Indus</span>
+            <span class="paragraph f-lato">Education Chatbot</span>
+        </div>
+    </div>
+    <button mat-icon-button matDialogClose [disableRipple]="true">
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+<div mat-dialog-content fxLayout="column" fxLayoutGap="10px">
+    <div fxLayout="row nowrap" fxLayoutAlign="start start">
+        <div class="tri-left"></div>
+        <div fxFlex="85%" class="message-ui-left f-lato">
+            <span>Hi 👋! Welcome to Indus Early Learning Centre, India's best ranking pre-school.<br><br>At Indus, we
+                create <strong>leaders of tomorrow</strong>. How can I help you today
+                ?</span>
+        </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="10px grid">
+        <div *ngFor="let menu of menuList | slice:0:5">
+            <button mat-stroked-button class="chat-menu-btn" (click)="viewMenuContent(menu?.id)">
+                <mat-icon style="width:16px;height:16px;font-size:16px;line-height:16px">{{menu?.icon}} </mat-icon>
+                &nbsp;{{menu?.title}}
+            </button>
+        </div>
+    </div>
+    <div *ngFor="let item of chatDataHistory; let last=last" fxLayout="column" fxLayoutGap="10px">
+        <div *ngIf="item.isSenderMessage" fxLayout="row nowrap" fxLayoutAlign="end start">
+            <div fxFlex="70%" class="message-ui-right f-lato">
+                <span>{{item.message}}</span>
+            </div>
+            <div class="tri-right"></div>
+        </div>
+
+        <div *ngIf="!item.isSenderMessage && !item.isTypedMessage " fxLayout="column" fxLayoutGap="10px">
+            <div fxLayout="row nowrap" fxLayoutAlign="start start">
+                <div class="tri-left"></div>
+                <div fxFlex="85%" class="message-ui-left f-lato">
+                    <span [innerHTML]="item.message"></span>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="!item.isSenderMessage && item.isTypedMessage " fxLayout="column" fxLayoutGap="10px">
+            <div fxLayout="row nowrap" fxLayoutAlign="start start">
+                <div class="tri-left"></div>
+                <div fxFlex="85%" class="message-ui-left f-lato" fxLayout="column">
+                    <span>{{item.message}}</span>
+                </div>
+            </div>
+        </div>
+        <div id="last" *ngIf="item.isAdmissions && last" fxLayout="column" fxLayoutGap="10px">
+            <div fxLayout="row wrap" fxLayoutGap="20px" fxLayoutAlign="center center">
+                <button mat-stroked-button class="chat-menu-btn" (click)="enquiry()">Yes</button>
+                <button mat-stroked-button class="chat-menu-btn" (click)="clearData()">No</button>
+            </div>
+        </div>
+        <div class="chatBot-carousel-ui" id="last" *ngIf="item.isAcademics && last">
+            <owl-carousel-o [options]="bannerOptions">
+                <ng-template carouselSlide *ngFor="let item of academics">
+                    <div style="padding:5px">
+                        <div fxLayout="column" style="border:1px solid lightgray;"
+                            class="mat-elevation-z1 br-5 text-d-n cursor" (click)="additionalContent(item)">
+                            <img [src]="item.img" width="100%" style="border-radius: 5px 5px 0px 0px;">
+                            <div class="p-10" fxLayoutAlign="center center">
+                                <span class="fs-sm fw-500 f-lato">{{item.grade}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </owl-carousel-o>
+        </div>
+        <div id="last" *ngIf="item.isAcademicsButton && last" fxLayout="row wrap" fxLayoutAlign="center center"
+            fxLayoutGap="10px grid">
+            <div *ngFor="let menu of menuList | slice:0:5">
+                <button mat-stroked-button class="chat-menu-btn" (click)="viewMenuContent(menu?.id)">
+                    <mat-icon style="width:16px;height:16px;font-size:16px;line-height:16px">{{menu?.icon}} </mat-icon>
+                    &nbsp;{{menu?.title}}
+                </button>
+            </div>
+            <div>
+                <button mat-stroked-button class="chat-menu-btn" (click)="enquiry()">
+                    <mat-icon style="width:16px;height:16px;font-size:16px;line-height:16px">info </mat-icon>
+                    &nbsp;Enquiry Form
+                </button>
+            </div>
+        </div>
+        <div id="last" *ngIf="isEnquiryYes && last" fxLayout="column" fxLayoutGap="10px" class="chat-bot-form">
+            <div fxLayout="row nowrap" fxLayoutAlign="start start">
+                <div class="tri-left"></div>
+                <form *ngIf="enquiryId == 1" [formGroup]="nameForm" (ngSubmit)="submitName()" fxFlex="85%"
+                    class="message-ui-left f-lato" fxLayout="column" fxLayoutGap="5px">
+                    <mat-form-field appearance="outline">
+                        <input matInput placeholder="Your Name" formControlName="name" required>
+                        <button mat-icon-button matSuffix type="submit" class="chat-bot-form-btn">
+                            <mat-icon>send</mat-icon>
+                        </button>
+                        <mat-error *ngIf="nameForm.get('name').hasError('required')">Name is required
+                        </mat-error>
+                        <mat-error
+                            *ngIf="!nameForm.get('name').hasError('required') && nameForm.get('name').hasError('minlength') && !nameForm.get('name').hasError('maxlength')">
+                            At least 3 characters
+                        </mat-error>
+                        <mat-error
+                            *ngIf="!nameForm.get('name').hasError('required') && !nameForm.get('name').hasError('minlength') && nameForm.get('name').hasError('maxlength')">
+                            At most 30 characters
+                        </mat-error>
+                    </mat-form-field>
+                </form>
+                <form *ngIf="enquiryId == 2" [formGroup]="phoneNoForm" (ngSubmit)="submitPhone()" fxFlex="85%"
+                    class="message-ui-left f-lato" fxLayout="column" fxLayoutGap="5px">
+                    <div fxLayout="row nowrap">
+                        <mat-form-field appearance="outline" fxFlex="">
+                            <input matInput placeholder="Your Contact No" formControlName="phoneNo" minlength="10"
+                                maxlength="10"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                required>
+                            <button mat-icon-button matSuffix type="submit" class="chat-bot-form-btn">
+                                <mat-icon>send</mat-icon>
+                            </button>
+                            <mat-error *ngIf="phoneNoForm.get('phoneNo').hasError('required')">Phone No is required
+                            </mat-error>
+                            <mat-error
+                                *ngIf="!phoneNoForm.get('phoneNo').hasError('required') && phoneNoForm.get('phoneNo').hasError('pattern')">
+                                Enter valid Phone No
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </form>
+                <form *ngIf="enquiryId == 3" [formGroup]="EmailForm" (ngSubmit)="submitEmail()" fxFlex="85%"
+                    class="message-ui-left f-lato" fxLayout="column" fxLayoutGap="5px">
+                    <mat-form-field appearance="outline">
+                        <input matInput placeholder="Your Email ID" formControlName="email">
+                        <button mat-icon-button matSuffix type="submit" class="chat-bot-form-btn">
+                            <mat-icon>send</mat-icon>
+                        </button>
+                        <mat-error *ngIf="EmailForm.get('email').hasError('required')">Email is required
+                        </mat-error>
+                        <mat-error
+                            *ngIf="!EmailForm.get('email').hasError('required') && EmailForm.get('email').hasError('email') ">
+                            Enter valid email
+                        </mat-error>
+                    </mat-form-field>
+                </form>
+            </div>
+        </div>
+        <div *ngIf="last" id="last"></div>
+    </div>
+</div>
+<mat-dialog-actions fxLayout="row" class="mat-elevation-z5" style="position:relative">
+    <div *ngIf="isMenusOpened" fxLayout="column" class="mat-elevation-z3"
+        style="position:absolute;bottom:60px;left:0px;width:100%;background-color: white;z-index:1">
+        <button mat-button *ngFor="let menu of menuList | slice:0:6">
+            <mat-icon color="accent">{{menu.icon}}</mat-icon>&nbsp;&nbsp;<span class="paragraph fw-500"
+                (click)="viewMenuContent(menu.id)">{{menu.title}}</span>
+        </button>
+    </div>
+    <form fxFlex="100%" [formGroup]="messageForm" (ngSubmit)="sendMessage()" fxLayout="row nowrap"
+        fxLayoutAlign="start center" class="sendMessageForm">
+        <mat-form-field fxFlex="" class="f-lato" floatLabel="never">
+            <input matInput type="text" formControlName="message" placeholder="Type a message" #input
+                autocomplete="off">
+        </mat-form-field>
+        <button mat-button fxFlex="40px" mat-icon-button aria-label="Send Message" type="submit" matRipple
+            [disabled]="input?.value?.length == 0">
+            <mat-icon>send</mat-icon>
+        </button>
+    </form>
+    <div fxFlex="100%" fxLayout="column">
+        <mat-divider></mat-divider>
+        <div class="chatBotBottomMenus" fxLayout="row wrap" fxLayoutAlign="space-between center">
+            <button mat-icon-button (click)="isMenusOpened = !isMenusOpened">
+                <mat-icon>{{isMenusOpened ? 'close': 'menu'}}</mat-icon>
+            </button>
+            <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px">
+                <span class="fs-x-smaller f-lato">Powered By</span>
+                <span class="fs-x-small fw-600 ls-1 text-accent f-lato">PROMENA</span>
+            </div>
+            <button mat-icon-button matTooltip="Clear Chat" (click)="clearData()">
+                <mat-icon>refresh</mat-icon>
+            </button>
+        </div>
+    </div>
+</mat-dialog-actions>
